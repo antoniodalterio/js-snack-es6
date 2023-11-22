@@ -38,3 +38,13 @@ for (let k in squadreCalcio) {
 }
 
 console.log(squadreCalcio);
+
+//  Milestone 2
+const statistiche = squadreCalcio.map(({ nome, falliSubiti }) => ({
+  nome,
+  falliSubiti,
+}));
+
+statistiche.forEach(({ nome, falliSubiti }) => {
+  console.log(`${nome} Falli subiti: ${falliSubiti}`);
+});
