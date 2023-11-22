@@ -6,13 +6,11 @@ Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e pe
 Stampare a schermo la bici con peso minore utilizzando destructuring e template literal 
 */
 
+// MIlestone 1
 function numeroRandom() {
-  const num = Math.floor(Math.random() * 30 + 10);
-
+  const num = Math.floor(Math.random() * 20) + 15;
   return num;
 }
-
-console.log(numeroRandom());
 
 const bici = [
   {
@@ -38,3 +36,16 @@ const bici = [
 ];
 
 console.log(bici);
+// Milestone 2
+
+let biciLeggera = bici[0];
+bici.forEach((bici) => {
+  if (bici.peso < biciLeggera.peso) {
+    biciLeggera = bici;
+  }
+});
+
+const { nome, peso } = biciLeggera;
+const body = document.querySelector('.container');
+body.innerHTML = `<h1> La bici &#128690 più leggera è la ${nome} con un peso di ${peso} kg.</h1>`;
+console.log(`La bici più leggera è ${nome} con un peso di ${peso} kg.`);
