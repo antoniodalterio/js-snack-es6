@@ -32,10 +32,10 @@ const squadreCalcio = [
   },
 ];
 
-for (let k in squadreCalcio) {
-  squadreCalcio[k].puntiFatti = numeroRandom(20);
-  squadreCalcio[k].falliSubiti = numeroRandom(20);
-}
+squadreCalcio.forEach((element) => {
+  element.puntiFatti = numeroRandom(20);
+  element.falliSubiti = numeroRandom(20);
+});
 
 console.log(squadreCalcio);
 
